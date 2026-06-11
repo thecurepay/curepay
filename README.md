@@ -1,4 +1,5 @@
-# Curepay
+<img width="1329" height="739" alt="image" src="https://github.com/user-attachments/assets/3f44b32c-3cf9-4e0d-9572-b4f5f384279f" />
+
 
 **A funding-carry trading agent for Solana perpetual futures (Drift Protocol).**
 
