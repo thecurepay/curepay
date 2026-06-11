@@ -46,7 +46,7 @@ class DriftClient:
         self._client = client or httpx.Client(
             timeout=timeout,
             headers={
-                "User-Agent": "curepay/0.1 (+https://github.com/nujar00t/curepay)",
+                "User-Agent": "curepay/0.1 (+https://github.com/thecurepay/curepay)",
                 "Accept": "application/json",
             },
         )

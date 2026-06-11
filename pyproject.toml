@@ -36,9 +36,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/nujar00t/curepay"
-Repository = "https://github.com/nujar00t/curepay"
-Issues = "https://github.com/nujar00t/curepay/issues"
+Homepage = "https://github.com/thecurepay/curepay"
+Repository = "https://github.com/thecurepay/curepay"
+Issues = "https://github.com/thecurepay/curepay/issues"
 
 [project.scripts]
 curepay = "curepay.cli:main"

@@ -55,7 +55,7 @@ total exposure at `max_leverage`, limits concurrent positions, and trips a
 ```bash
 pip install curepay          # from PyPI (once published)
 # or, from source:
-git clone https://github.com/nujar00t/curepay
+git clone https://github.com/thecurepay/curepay
 cd curepay
 pip install -e ".[dev]"
 ```
