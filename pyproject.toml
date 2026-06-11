@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "curepay"
+version = "0.1.0"
+description = "Curepay — a funding-carry trading agent for Solana perpetual futures (Drift Protocol)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "nujar00t", email = "teraziminoka@gmail.com" }]
+keywords = ["solana", "perpetuals", "perps", "drift", "trading", "agent", "funding-rate", "defi"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/nujar00t/curepay"
+Repository = "https://github.com/nujar00t/curepay"
+Issues = "https://github.com/nujar00t/curepay/issues"
+
+[project.scripts]
+curepay = "curepay.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["curepay*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = [
+    "network: tests that hit live public APIs (skipped automatically when unreachable)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
